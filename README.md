@@ -1,3 +1,4 @@
+
 # Business Card Management System
 
 A comprehensive business card management system built using modern web technologies. This project allows users to manage business cards efficiently, with features like user authentication, validation, and a user-friendly interface.
@@ -41,7 +42,7 @@ http://localhost:3000
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Acknowledgments
+Acknowledgments-
 React
 Node.js
 MUI
@@ -51,7 +52,13 @@ Express
 
 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## 🚀 About Me
+If you have any questions, suggestions, or would like to connect, feel free to reach out through the following channels:
+
+- **Email:** More3031996@gmail.com
+- **LinkedIn:** [Mor Rachmani](https://www.linkedin.com/in/mor-rachmani)
+- **GitHub:** [More3162](https://github.com/More3162)
+
