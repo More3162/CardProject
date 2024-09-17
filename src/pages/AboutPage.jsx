@@ -18,31 +18,17 @@ export default function AboutPage() {
         }}
       >
         <Container sx={{ flex: 1, mr: 2 }}>
-          <Typography variant="h6">About Page</Typography>
           <Typography variant="body1" paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            quas, similique quos ducimus quaerat aperiam quibusdam recusandae
-            voluptas consequuntur quam qui nam reiciendis porro? Assumenda
-            facere esse incidunt sit illum vel qui totam praesentium corrupti.
-            Ducimus asperiores maxime laudantium corporis nisi eligendi magni id
-            sequi! Aliquam cupiditate, quas maxime deleniti sunt accusamus amet
-            aut molestias, beatae nulla sequi eaque reiciendis id, iste nobis.
-            Aliquid, blanditiis repellat molestias modi necessitatibus cum non
-            dolor enim ullam minima recusandae deserunt! Quia odit, tempora
-            dolore fuga assumenda atque iusto. Neque cum mollitia officiis
-            officia sit asperiores obcaecati voluptatem reprehenderit, eos
-            consequatur, sint vel nulla? Neque consequatur error unde enim
-            consequuntur dolorum ea quasi sint ad vel dicta corporis atque
-            provident beatae sunt cupiditate numquam nisi voluptatum aspernatur
-            adipisci, et ullam recusandae? Quas pariatur modi ratione
-            laudantium. Iusto, tenetur. Quae harum eius distinctio? Molestiae
-            voluptatibus iste, minima cum fugiat numquam id recusandae nostrum
-            eaque illo saepe quasi tempore facere iusto at. Necessitatibus nam a
-            commodi voluptatum odio aliquam vero dolores ipsum saepe, eum est
-            sit reprehenderit cumque id distinctio optio? Corporis tempora
-            eveniet ex expedita dolorum dolor dignissimos, magni rerum eligendi
-            ea laborum maxime vel reprehenderit voluptas assumenda odio! Sunt
-            doloremque at accusantium aspernatur eaque!
+            Welcome to our Business Cards platform!
+          </Typography>
+          <Typography variant="body1" paragraph>
+            This project is designed to provide a seamless experience for managing and showcasing business cards. Users can explore a comprehensive database of available cards, register to become business users, and create their own custom cards. Our platform also allows users to add cards to their favorites, which can be viewed on a dedicated favorites page. Each feature, from card creation to favorites management, has its own intuitive page for a smooth user experience.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Our website is built using React for a dynamic and responsive user interface, Material-UI (MUI) for a sleek and modern design, and vanilla JavaScript for foundational functionalities. We leverage Object-Oriented Programming (OOP) principles to ensure clean and maintainable code. Additionally, we utilize LocalStorage for efficient data management and JSON Web Tokens (JWT) for secure user authentication and authorization.
+          </Typography>
+          <Typography variant="body1">
+            Thank you for visiting, and we hope you enjoy using our platform to create and manage your business cards!
           </Typography>
         </Container>
         <Container sx={{ flex: 1 }}>
