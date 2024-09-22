@@ -2,10 +2,12 @@ import { useCallback, useState } from "react";
 import { useSnack } from "../../providers/SnackbarProvider";
 import axios from "axios";
 import useAxios from "../../hooks/useAxios";
-import { deleteCard, editCard, changeLikeStatus } from "../services/cardsApiService";
+import { deleteCard, editCard, changeLikeStatus, getCards, getCard, getMyCards, createCard } from "../services/cardsApiService";
 import { useNavigate } from "react-router-dom";
 import normalizeCard from "../helpers/normalization/normalizeCard";
 import ROUTES from "../../routes/routesModel";
+
+
 
 export default function useCards() {
   const [cards, setCards] = useState([]);
@@ -19,10 +21,8 @@ export default function useCards() {
 
   const getAllCards = useCallback(async () => {
     try {
-      let response = await axios.get(
-        "https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards"
-      );
-      setCards(response.data);
+      let data = await getCards();
+      setCards(data);
       setSnack("success", "All cards are here!");
     } catch (err) {
       setError(err.message);
@@ -30,12 +30,11 @@ export default function useCards() {
     setIsLoading(false);
   }, []);
 
+
   const getMyCards = useCallback(async () => {
     try {
-      let response = await axios.get(
-        "https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/my-cards"
-      );
-      setCards(response.data);
+      let data = await getMyCards();
+      setCards(data);
       setSnack("success", "All your cards are here!");
     } catch (err) {
       setError(err.message);
@@ -45,10 +44,7 @@ export default function useCards() {
 
   const getCardById = useCallback(async (id) => {
     try {
-      const response = await axios.get(
-        `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`
-      );
-      const data = response.data;
+      const data = await getCard(id);
       setCard(data);
     } catch (err) {
       setError(err.message);
@@ -102,16 +98,13 @@ export default function useCards() {
     [setSnack, navigate]
   );
 
+
   const handleCreateCard = useCallback(
     async (cardFromClient) => {
       setError(null);
       setIsLoading(true);
       try {
-        const { data } = await axios.post(
-          `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards`,
-          normalizeCard(cardFromClient),
-          { "x-auth-token": localStorage.getItem("my token") }
-        );
+        const data = await createCard(normalizeCard(cardFromClient));
         const card = data;
         setCard(card);
         setSnack("success", "A new business card has been created");

@@ -1,5 +1,7 @@
 import axios from "axios";
-const apiUrl = "https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards";
+
+
+const apiUrl = "http://localhost:8181/cards";
 
 export const getCards = async () => {
   try {
@@ -42,7 +44,7 @@ export const deleteCard = async (cardId) => {
 
 export const createCard = async (card) => {
   try {
-    const { data } = await axios.post(apiUrl, card);
+    const data = await axios.post(apiUrl, card);
     return data;
   } catch (error) {
     console.error("Error making request:", error.message); // Log error message
