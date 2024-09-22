@@ -8,7 +8,6 @@ import normalizeCard from "../helpers/normalization/normalizeCard";
 import ROUTES from "../../routes/routesModel";
 
 
-
 export default function useCards() {
   const [cards, setCards] = useState([]);
   const [card, setCard] = useState();
@@ -31,7 +30,7 @@ export default function useCards() {
   }, []);
 
 
-  const getMyCards = useCallback(async () => {
+  const getMyCard = useCallback(async () => {
     try {
       let data = await getMyCards();
       setCards(data);
@@ -126,7 +125,7 @@ export default function useCards() {
     error,
     isLoading,
     getAllCards,
-    getMyCards,
+    getMyCard,
     getCardById,
     handleDelete,
     handleLike,

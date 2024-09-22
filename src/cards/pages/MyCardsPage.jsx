@@ -12,12 +12,12 @@ import ROUTES from "../../routes/routesModel";
 import { useSearch } from "../../providers/SearchProvider";
 
 export default function MyCardsPage() {
-  const { cards, error, isLoading, getMyCards, handleDelete, handleLike } =
+  const { cards, error, isLoading, getMyCard, handleDelete, handleLike } =
     useCards();
   const { search } = useSearch();
 
   useEffect(() => {
-    getMyCards();
+    getMyCard();
   }, []);
 
   return (
